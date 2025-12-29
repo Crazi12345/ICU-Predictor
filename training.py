@@ -3,9 +3,14 @@ import sys
 import logging
 import argparse
 import pickle
+from datetime import datetime
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
+# Generate timestamp for plot directory
+run_timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+plot_dir = f"plots_{run_timestamp}"
 import seaborn as sns
 import torch
 import torch.nn as nn
@@ -513,19 +518,49 @@ def evaluate_sequence_model(model, X_seq, y_seq, threshold=0.5, name='model', fi
 
 def plot_all_results(eval_metrics_list, model_dfs, final_epoch_results, best_model_name):
     # Ensure plots directory exists
-    os.makedirs('plots', exist_ok=True)
+    os.makedirs(plot_dir, exist_ok=True)
 
     # 1. Hyperparam plots for ALL models
     for name, df in model_dfs.items():
         if df is not None and not df.empty:
-            plt.figure(figsize=(10, 6))
-            # Just plotting score distribution for top 15 configs
-            sns.barplot(data=df.head(15), x='score', y=df.head(15).index)
-            plt.title(f'{name} - Top 15 Configs')
-            plt.xlabel('Val AUC')
-            plt.ylabel('Rank')
-            plt.tight_layout()
-            plt.savefig(f'plots/{name}_tuning_results.png')
+            # Identify params (exclude metrics and identifiers)
+            exclude = ['score', 'utility', 'auc', 'f1', 'precision', 'recall', 'ap', 'confusion_matrix', 'y_true', 'y_pred', 'name']
+            params = [c for c in df.columns if c not in exclude and df[c].nunique() > 1]
+            
+            if not params:
+                continue
+
+            # Layout: Grid of subplots
+            ncols = 3
+            nrows = (len(params) + ncols - 1) // ncols
+            fig, axs = plt.subplots(nrows, ncols, figsize=(6 * ncols, 5 * nrows))
+            
+            # Ensure axs is iterable even if only 1 subplot
+            if nrows * ncols == 1:
+                axs = np.array([axs])
+            axs = axs.ravel()
+
+            for i, param in enumerate(params):
+                # Get max score per param value
+                best_scores = df.groupby(param)['score'].max()
+                
+                # Plot
+                x_vals = best_scores.index.astype(str)
+                y_vals = best_scores.values
+                
+                axs[i].bar(x_vals, y_vals, color='skyblue', edgecolor='black')
+                axs[i].set_title(f'Effect of {param}')
+                axs[i].set_ylabel('Best Val AUC')
+                axs[i].tick_params(axis='x', rotation=45)
+                axs[i].grid(axis='y', linestyle='--', alpha=0.7)
+
+            # Turn off unused subplots
+            for j in range(i + 1, len(axs)):
+                axs[j].axis('off')
+            
+            plt.suptitle(f'{name} Hyperparameter Impact', fontsize=16)
+            plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+            plt.savefig(f'{plot_dir}/{name}_hyperparams.png')
             plt.close()
 
     # 2. Final Epochs Performance Line Plot
@@ -543,7 +578,7 @@ def plot_all_results(eval_metrics_list, model_dfs, final_epoch_results, best_mod
         plt.legend()
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig(f'plots/{best_model_name}_epochs_trend.png')
+        plt.savefig(f'{plot_dir}/{best_model_name}_epochs_trend.png')
         plt.close()
 
     # 3. Evaluation Metrics (ROC, PR, CM) for final runs
@@ -593,7 +628,7 @@ def plot_all_results(eval_metrics_list, model_dfs, final_epoch_results, best_mod
         plt.ylabel('True label')
         plt.xlabel('Predicted label')
         plt.tight_layout()
-        plt.savefig(f'plots/{name}_metrics_{i}.png')
+        plt.savefig(f'{plot_dir}/{name}_metrics_{i}.png')
         plt.close()
 
 # --- Main Execution Flow ---
