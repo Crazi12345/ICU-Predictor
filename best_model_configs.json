@@ -1,0 +1,578 @@
+[
+    {
+        "name": "Default_RNN_BestUtil_209",
+        "hp": {
+            "batch_size": 64,
+            "dropout": 0.4,
+            "final_activation": "leakyrelu",
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "units": 128
+        },
+        "score_type": "utility",
+        "val_score": 0.12402820968458439
+    },
+    {
+        "name": "Default_RNN_BestUtil_145",
+        "hp": {
+            "batch_size": 64,
+            "dropout": 0.2,
+            "final_activation": "leakyrelu",
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "units": 128
+        },
+        "score_type": "utility",
+        "val_score": 0.09826743669480202
+    },
+    {
+        "name": "Default_RNN_BestAUC_1",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "units": 128
+        },
+        "score_type": "auc",
+        "val_score": 0.9890876577344023
+    },
+    {
+        "name": "Default_RNN_BestAUC_3",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "units": 128
+        },
+        "score_type": "auc",
+        "val_score": 0.9886243465659293
+    },
+    {
+        "name": "Default_CNN_BestUtil_176",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "f1": 32,
+            "f2": 128,
+            "final_activation": "leakyrelu",
+            "kernel_size": 5,
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "stride": 1
+        },
+        "score_type": "utility",
+        "val_score": 0.0862949800088849
+    },
+    {
+        "name": "Default_CNN_BestUtil_308",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "f1": 64,
+            "f2": 64,
+            "final_activation": "leakyrelu",
+            "kernel_size": 5,
+            "loss": "mse",
+            "lr": 0.0005,
+            "optimizer": "adam",
+            "stride": 1
+        },
+        "score_type": "utility",
+        "val_score": 0.08110839626832518
+    },
+    {
+        "name": "Default_CNN_BestAUC_400",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "f1": 64,
+            "f2": 128,
+            "final_activation": "sigmoid",
+            "kernel_size": 5,
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "stride": 1
+        },
+        "score_type": "auc",
+        "val_score": 0.9917037652996595
+    },
+    {
+        "name": "Default_CNN_BestAUC_1140",
+        "hp": {
+            "batch_size": 64,
+            "dropout": 0.2,
+            "f1": 32,
+            "f2": 64,
+            "final_activation": "tanh",
+            "kernel_size": 5,
+            "loss": "mse",
+            "lr": 0.0005,
+            "optimizer": "adam",
+            "stride": 1
+        },
+        "score_type": "auc",
+        "val_score": 0.9916320829989608
+    },
+    {
+        "name": "Default_LGSTM_BestUtil_138",
+        "hp": {
+            "batch_size": 8,
+            "dropout": 0.4,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.0005,
+            "optimizer": "adam",
+            "u1": 128,
+            "u2": 32
+        },
+        "score_type": "utility",
+        "val_score": 0.20719680142159044
+    },
+    {
+        "name": "Default_LGSTM_BestUtil_199",
+        "hp": {
+            "batch_size": 8,
+            "dropout": 0.4,
+            "final_activation": "elu",
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "u1": 128,
+            "u2": 64
+        },
+        "score_type": "utility",
+        "val_score": 0.19068191914704585
+    },
+    {
+        "name": "Default_LGSTM_BestAUC_14",
+        "hp": {
+            "batch_size": 8,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.0005,
+            "optimizer": "adamw",
+            "u1": 128,
+            "u2": 32
+        },
+        "score_type": "auc",
+        "val_score": 0.9949503146316839
+    },
+    {
+        "name": "Default_LGSTM_BestAUC_134",
+        "hp": {
+            "batch_size": 8,
+            "dropout": 0.4,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "u1": 128,
+            "u2": 32
+        },
+        "score_type": "auc",
+        "val_score": 0.994837626960214
+    },
+    {
+        "name": "neg1_RNN_BestUtil_211",
+        "model_type": "RNN",
+        "hp": {
+            "batch_size": 64,
+            "dropout": 0.4,
+            "final_activation": "leakyrelu",
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "units": 128
+        },
+        "score_type": "utility",
+        "val_score": 0.08321301643713885
+    },
+    {
+        "name": "neg1_RNN_BestUtil_138",
+        "model_type": "RNN",
+        "hp": {
+            "batch_size": 64,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "units": 64
+        },
+        "score_type": "utility",
+        "val_score": 0.06453243003109724
+    },
+    {
+        "name": "neg1_RNN_BestAUC_3",
+        "model_type": "RNN",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "units": 128
+        },
+        "score_type": "auc",
+        "val_score": 0.9891217638921102
+    },
+    {
+        "name": "neg1_RNN_BestAUC_67",
+        "model_type": "RNN",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.4,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "units": 128
+        },
+        "score_type": "auc",
+        "val_score": 0.9889040686269968
+    },
+    {
+        "name": "neg1_CNN_BestUtil_752",
+        "model_type": "CNN",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.4,
+            "f1": 32,
+            "f2": 128,
+            "final_activation": "tanh",
+            "kernel_size": 5,
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "stride": 1
+        },
+        "score_type": "utility",
+        "val_score": 0.10316525988449572
+    },
+    {
+        "name": "neg1_CNN_BestUtil_340",
+        "model_type": "CNN",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "f1": 64,
+            "f2": 64,
+            "final_activation": "elu",
+            "kernel_size": 5,
+            "loss": "mse",
+            "lr": 0.0005,
+            "optimizer": "adam",
+            "stride": 1
+        },
+        "score_type": "utility",
+        "val_score": 0.07091848067525544
+    },
+    {
+        "name": "neg1_CNN_BestAUC_402",
+        "model_type": "CNN",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "f1": 64,
+            "f2": 128,
+            "final_activation": "sigmoid",
+            "kernel_size": 5,
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "stride": 1
+        },
+        "score_type": "auc",
+        "val_score": 0.9908999094571914
+    },
+    {
+        "name": "neg1_CNN_BestAUC_656",
+        "model_type": "CNN",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.4,
+            "f1": 32,
+            "f2": 128,
+            "final_activation": "sigmoid",
+            "kernel_size": 5,
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "stride": 1
+        },
+        "score_type": "auc",
+        "val_score": 0.9908585778514778
+    },
+    {
+        "name": "neg1_LGSTM_BestUtil_138",
+        "model_type": "LGSTM",
+        "hp": {
+            "batch_size": 8,
+            "dropout": 0.4,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.0005,
+            "optimizer": "adam",
+            "u1": 128,
+            "u2": 32
+        },
+        "score_type": "utility",
+        "val_score": 0.2122445579742336
+    },
+    {
+        "name": "neg1_LGSTM_BestUtil_23",
+        "model_type": "LGSTM",
+        "hp": {
+            "batch_size": 8,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "u1": 128,
+            "u2": 64
+        },
+        "score_type": "utility",
+        "val_score": 0.18685028876055096
+    },
+    {
+        "name": "neg1_LGSTM_BestAUC_135",
+        "model_type": "LGSTM",
+        "hp": {
+            "batch_size": 8,
+            "dropout": 0.4,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "u1": 128,
+            "u2": 64
+        },
+        "score_type": "auc",
+        "val_score": 0.9946064658012133
+    },
+    {
+        "name": "neg1_LGSTM_BestAUC_14",
+        "model_type": "LGSTM",
+        "hp": {
+            "batch_size": 8,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.0005,
+            "optimizer": "adamw",
+            "u1": 128,
+            "u2": 32
+        },
+        "score_type": "auc",
+        "val_score": 0.9945850542934991
+    },
+    {
+        "name": "mean_RNN_BestUtil_215",
+        "model_type": "RNN",
+        "hp": {
+            "batch_size": 64,
+            "dropout": 0.4,
+            "final_activation": "leakyrelu",
+            "loss": "mse",
+            "lr": 0.0005,
+            "optimizer": "adamw",
+            "units": 128
+        },
+        "score_type": "utility",
+        "val_score": 0.12574411372723224
+    },
+    {
+        "name": "mean_RNN_BestUtil_137",
+        "model_type": "RNN",
+        "hp": {
+            "batch_size": 64,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "units": 128
+        },
+        "score_type": "utility",
+        "val_score": 0.09163149711239431
+    },
+    {
+        "name": "mean_RNN_BestAUC_64",
+        "model_type": "RNN",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.4,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "units": 64
+        },
+        "score_type": "auc",
+        "val_score": 0.9892106915141307
+    },
+    {
+        "name": "mean_RNN_BestAUC_0",
+        "model_type": "RNN",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "units": 64
+        },
+        "score_type": "auc",
+        "val_score": 0.9889568390968319
+    },
+    {
+        "name": "mean_CNN_BestUtil_466",
+        "model_type": "CNN",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "f1": 64,
+            "f2": 128,
+            "final_activation": "elu",
+            "kernel_size": 5,
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "stride": 1
+        },
+        "score_type": "utility",
+        "val_score": 0.08782763216348292
+    },
+    {
+        "name": "mean_CNN_BestUtil_1488",
+        "model_type": "CNN",
+        "hp": {
+            "batch_size": 64,
+            "dropout": 0.2,
+            "f1": 64,
+            "f2": 128,
+            "final_activation": "elu",
+            "kernel_size": 5,
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "stride": 1
+        },
+        "score_type": "utility",
+        "val_score": 0.08536206130608617
+    },
+    {
+        "name": "mean_CNN_BestAUC_1366",
+        "model_type": "CNN",
+        "hp": {
+            "batch_size": 64,
+            "dropout": 0.2,
+            "f1": 64,
+            "f2": 64,
+            "final_activation": "elu",
+            "kernel_size": 5,
+            "loss": "mse",
+            "lr": 0.0005,
+            "optimizer": "adamw",
+            "stride": 1
+        },
+        "score_type": "auc",
+        "val_score": 0.992394476042039
+    },
+    {
+        "name": "mean_CNN_BestAUC_150",
+        "model_type": "CNN",
+        "hp": {
+            "batch_size": 32,
+            "dropout": 0.2,
+            "f1": 32,
+            "f2": 128,
+            "final_activation": "sigmoid",
+            "kernel_size": 5,
+            "loss": "binary_crossentropy",
+            "lr": 0.0005,
+            "optimizer": "adamw",
+            "stride": 1
+        },
+        "score_type": "auc",
+        "val_score": 0.9920477575685499
+    },
+    {
+        "name": "mean_LGSTM_BestUtil_387",
+        "model_type": "LGSTM",
+        "hp": {
+            "batch_size": 16,
+            "dropout": 0.4,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adam",
+            "u1": 128,
+            "u2": 64
+        },
+        "score_type": "utility",
+        "val_score": 0.20982341181697026
+    },
+    {
+        "name": "mean_LGSTM_BestUtil_71",
+        "model_type": "LGSTM",
+        "hp": {
+            "batch_size": 8,
+            "dropout": 0.2,
+            "final_activation": "elu",
+            "loss": "mse",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "u1": 128,
+            "u2": 64
+        },
+        "score_type": "utility",
+        "val_score": 0.18738893824966676
+    },
+    {
+        "name": "mean_LGSTM_BestAUC_263",
+        "model_type": "LGSTM",
+        "hp": {
+            "batch_size": 16,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "u1": 128,
+            "u2": 64
+        },
+        "score_type": "auc",
+        "val_score": 0.9952995228113044
+    },
+    {
+        "name": "mean_LGSTM_BestAUC_6",
+        "model_type": "LGSTM",
+        "hp": {
+            "batch_size": 8,
+            "dropout": 0.2,
+            "final_activation": "sigmoid",
+            "loss": "binary_crossentropy",
+            "lr": 0.001,
+            "optimizer": "adamw",
+            "u1": 128,
+            "u2": 32
+        },
+        "score_type": "auc",
+        "val_score": 0.9949896109861616
+    }
+]

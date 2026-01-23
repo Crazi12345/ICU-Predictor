@@ -69,7 +69,7 @@ if args.use_all_pp:
     methods = ['neg1', 'mean', 'median', 'linear']
 
     for method in methods:
-        pkl_file = f"preprocessed_{method}.pkl"
+        pkl_file = f"data/preprocessed_{method}.pkl"
         if not os.path.exists(pkl_file):
             logging.warning(f"File {pkl_file} not found. Skipping...")
             continue

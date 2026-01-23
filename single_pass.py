@@ -22,7 +22,7 @@ logging.basicConfig(
 )
 
 # Configuration
-PREPROCESSED_FILE = 'preprocessed_mean.pkl'
+PREPROCESSED_FILE = 'data/preprocessed_mean.pkl'
 PLOT_DIR = f"single_pass_plots_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
 os.makedirs(PLOT_DIR, exist_ok=True)
 

@@ -158,7 +158,7 @@ def get_last_final_configs():
         }
     ]
 
-def get_data(use_cache=False, cache_path='preprocessed_data.pkl'):
+def get_data(use_cache=False, cache_path='data/preprocessed_data.pkl'):
     if use_cache and os.path.exists(cache_path):
         logging.info(f"Loading preprocessed data from {cache_path}...")
         try:
@@ -174,7 +174,7 @@ def get_data(use_cache=False, cache_path='preprocessed_data.pkl'):
     # the default pipeline in this script does the "neg1" strategy (the one we hardcoded earlier).
     # Ideally, preprocessing.py should be used to generate these files.
 
-    if cache_path != 'preprocessed_data.pkl':
+    if cache_path != 'data/preprocessed_data.pkl':
          logging.error(f"Cache file {cache_path} not found! Please run preprocessing.py first.")
          sys.exit(1)
 
@@ -1133,7 +1133,7 @@ if __name__ == "__main__":
 
         for method in methods:
 
-            pkl_file = f"preprocessed_{method}.pkl"
+            pkl_file = f"data/preprocessed_{method}.pkl"
 
             if not os.path.exists(pkl_file):
 

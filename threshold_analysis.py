@@ -127,10 +127,10 @@ def compute_prediction_utility(labels, predictions, dt_early=-12, dt_optimal=-6,
     return normalized_utility
 
 def load_data(method):
-    filename = f'preprocessed_{method}.pkl'
+    filename = f'data/preprocessed_{method}.pkl'
     if not os.path.exists(filename):
         logging.warning(f"{filename} not found. Trying preprocessed_data.pkl")
-        filename = 'preprocessed_data.pkl'
+        filename = 'data/preprocessed_data.pkl'
 
     logging.info(f"Loading data from {filename}...")
     with open(filename, 'rb') as f:

@@ -54,7 +54,7 @@ parser.add_argument('--use-cache', action='store_true', help='Use cached preproc
 args, unknown = parser.parse_known_args()
 
 def get_data(use_cache=False):
-    cache_path = 'preprocessed_data.pkl'
+    cache_path = 'data/preprocessed_data.pkl'
     if use_cache and os.path.exists(cache_path):
         logging.info(f"Loading preprocessed data from {cache_path}...")
         try:

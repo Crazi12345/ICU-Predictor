@@ -137,7 +137,7 @@ def process_and_save(df_input, method_name, imputation_fn):
         'n_train': n_train, 'n_val': n_val
     }
 
-    filename = f"preprocessed_{method_name}.pkl"
+    filename = f"data/preprocessed_{method_name}.pkl"
     with open(filename, 'wb') as f:
         pickle.dump(data_bundle, f)
     logging.info(f"✓ Saved to {filename}")
